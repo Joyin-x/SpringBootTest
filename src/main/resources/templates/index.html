@@ -1,10 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>springTest</title>
-</head>
-<body>
-123
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>springTest</title>
+        <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    </head>
+    <body>
+        <div id="app">
+            <el-container>
+                <el-header>Header 默认 : 60px;</el-header>
+                <el-container :style="height">
+                    <el-aside width="200px">Aside</el-aside>
+                    <el-main>
+                        <el-col>
+                            <span>Main</span>
+                        </el-col>
+                        <el-col>
+                            <span>:window.innerHeight - 120</span>
+                        </el-col>
+                        <el-col>
+                            <span>(右侧通常会有上下滚动栏,120 + 16左右就会消失)</span>
+                        </el-col>
+                    </el-main>
+                </el-container>
+                <el-footer>Footer 默认: 60px;</el-footer>
+            </el-container>
+        </div>
+    </body>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            },
+            methods: {
+            }
+        })
+    </script>
+    <style>
+        .el-header, .el-footer {
+            background-color: #B3C0D1;
+            color: #333;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        .el-aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .el-main {
+            background-color: #E9EEF3;
+            color: #333;
+            text-align: center;
+            line-height: 160px;
+        }
+    </style>
 </html>
